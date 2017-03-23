@@ -1,0 +1,81 @@
+html,body{
+    width: 100%;
+    background:#f4f4f4;
+}
+.msy-article{
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+.msy-header{
+    width: 100%;
+    border-bottom: 1px dashed #ddd;
+}
+.msy-header h1{
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: orange;
+}
+.msy-header figure img{
+    margin: 15px 15px 0 0;
+    width: 300px;
+    float: none;
+}
+.msy-main figure img{
+    margin: 10px 10px 0 0;
+    width: 200px;
+    float: none;
+}
+.msy-header h2{
+    line-height: 50px;
+    text-align: left;
+    font-size: 20px;
+    color: red;
+
+}
+.msy-header p{
+    line-height: 40px;
+    font-size: 18px;
+    text-indent: 30px;
+}
+
+.msy-main h3{
+    line-height: 50px;
+    text-align: left;
+    font-size: 18px;
+    color: red;
+}
+
+.msy-main figure figcaption{
+    line-height: 40px;
+    font-size: 18px;
+    color: orange;
+}
+
+
+
+.msy-main p{
+    line-height: 40px;
+    font-size: 18px;
+    text-indent: 30px;
+}
+@media all and (max-width:800px ){
+    .msy-article{
+        padding: 0 5px;
+        width: auto;
+    }
+    .msy-article {
+        text-overflow:ellipsis ;
+        width-space:nowrap ;
+        overflow: hidden;
+    }
+    @media all and (max-width:480px ){
+        .msy-article{
+            padding: 0 5px;
+            width: auto;
+        }
+    }
+}
+

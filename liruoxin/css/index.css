@@ -1,0 +1,115 @@
+html, body {
+    width: 100%;
+    background: #F4F4F4;
+    /*overflow:hidden;*//*溢出隐藏；超出的内容看不见了，而且把滚动条都隐藏了*/
+}
+
+.sjziei-article {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+
+.sjziei-header {
+    border-bottom: 1px dashed #DDD;
+}
+
+.sjziei-header h1 {
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sjziei-header h2 {
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: orange;
+}
+
+.sjziei-main {
+
+}
+
+.sjziei-main h3 {
+    line-height: 50px;
+    font-size: 16px;
+    color: green;
+}
+
+.sjziei-main p {
+    line-height: 35px;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+.sjziei-main p em {
+    font-weight: bold;
+    color: orange;
+    font-style: normal;
+}
+
+.sjziei-main figure {
+    margin: 15px 15px 0 0;
+    width: 300px;
+    float: left;
+}
+
+.sjziei-main figure img {
+    width: 100%;
+}
+
+.sjziei-main figure figcaption {
+    font-size: 12px;
+    color: #AAA;
+    font-style: italic;
+    line-height: 20px;
+}
+
+/*小于800px的时候进行样式调整:
+@media是在CSS中设定条件的(媒体查询)[媒体设备]
+all->全部设备
+screen->全部的屏幕设备(手机、电脑)
+...
+[媒体条件]
+   max-width:最大宽度>=800
+   min-width:最小宽度>=800
+   device-width
+   max-height/min-height/device-height
+
+*/
+
+@media all and (max-width: 800px){
+    .sjziei-article{
+        padding:0 10px;
+        width:auto;/*宽度自适应:页面有多宽，我们让article的宽度跟着自动改变即可*/
+    }
+    .sjziei-header h1,.sjziei-header h2{
+        /*内容超出一行自动裁切，并以...代替*/
+        text-overflow:clip;/*超出的部分自动裁切，ellipsis:添加省略号   clip:只是裁切没有省略号*/
+        white-space:nowrap;/*强制不换行*/
+        overflow:hidden;/*超出的部分隐藏*/
+    }
+
+}
+@media all and (max-width: 480px) {
+    /*宽度小于480px的时候，我们也没有必要让文字环绕图片了，图片单独的占一行即可*/
+    .sjziei-main figure{
+        margin:10px 0;
+        width:auto;
+        float:none;
+    }
+    .sjziei-main aside{
+        display:none;
+
+    }
+
+
+
+
+}
+
+body{
+
+}

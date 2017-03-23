@@ -1,0 +1,44 @@
+html,body{
+    width: 100%;
+    background: #F4F4F4;
+}
+.sjziei-nav{
+    height:35px;
+    background: #FFFFFF;
+}
+.sjziei-nav ul{
+
+}
+.sjziei-nav ul li {
+    /*width: 50px;
+    height: 20px;*/
+    float: left;
+
+}
+.sjziei-nav ul li a{
+    display: block;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius:20px;
+    -webkit-transition:0.3s;/*设置过渡动画，以后只要A的样式发生改变，都会在0.3三秒之内完成动画*/
+    -moz-transition: 0.3s;
+    -ms-transition:0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;/*transition是CSS3中新增的属性，在IE低版本浏览器中不兼容，如果不影响用户的正常使用，
+                        我们可以选择不处理兼容(->"优雅降级")*/
+    /*为了更好的兼容其它的高版本浏览器，我们一般都写两套或者五套(手机上写两套，PC端写五套)*/
+}
+.sjziei-nav ul li a:hover{
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(top left,purple,green,black);
+    background: -moz-linear-gradient(top left,purple,green,black);
+    background: -ms-linear-gradient(top left,purple,green,black);
+    background: -o-linear-gradient(top left,purple,green,black);
+    background: linear-gradient(top left,purple,green,black);
+    box-shadow: 5PX 5PX 10PX 0 #000000;
+}

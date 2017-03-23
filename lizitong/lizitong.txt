@@ -1,0 +1,134 @@
+1、CSS总结
+块状标签
+div
+p
+ul/li
+ol/li
+dl/dt/dd
+h1-h6
+
+[html5]在IE6-8低版本的浏览器中不
+header
+footer
+main
+nav
+article
+figure
+figcaption
+aside
+...
+行内标签
+a
+span
+img
+em
+strong
+small
+input:文本框/单选按钮/复选按钮/密码框
+<input type='text'/>
+<input type='password'/>
+<input type='radio'/>
+<input type='checkbox'/>
+
+
+2、HTML5中新增加的标签在IE低版本浏览器中不兼容，我们需要处理兼容
+
+    原理：在IE-8下,我们把H5标签替换为传统的标签
+    方案：引入html5.min.js处理兼容
+    <!--[if lt IE 9]>
+        <script src="js/html5.min.js"></script>
+    <![endif]-->
+上面的注释叫做条件注释：lt是小于（gt是大于），此处写法一个单词一个符号或者任何一个的大小写都不错，错了就没有作用了
+
+３、CSS
+我们一般都在CSS文件夹中，把所有的样式代码都写在这个文件中，最后在index.html中导入进来
+<link rel='stylesheet'herf='css/xxx.css'/>
+但是在导入我们自己的CSS样式之前，我们一般先导入reset.min.css：统一各个标签在不同浏览器中的默认样式，方便后续我们自己的样式编写
+<head>
+<link rel='stylesheet href='css/reset.min.css'>
+<link rel='stylesheet href='css/xxx.css'>
+<--顺序不能错-->
+<head>
+第一部分：ｃｓｓ选择器靠右对齐ID选择器；#box{...}
+                   标签选择器：div{...}
+                   样式类名选择器: .box{...} <div class='box'></div>
+                   群组选择器:#box1,#box2{...}ID为box1或者box2的元素都同时拥有这个样式
+                   通配符选择器:*{...}所有的元素标签都拥有这个样式
+                   后代选择器:#box a{...} 在ID为box的元素的后代中进行查找，找到所有的A标签，然后设定样式
+                   子代选择器:#box>a{...}在ID为box的元素的儿子中进行查找，找到儿子中标签名叫做A的，然后设定样式
+                   伪类选择器
+                      :hover 鼠标滑过
+                      :active 鼠标按下
+
+                      [CSS3]
+                      :nth-child(n/odd/even){...}
+                      :nth-last-child(n){...}
+
+               第二部分: 常用的CSS样式
+               "CSS盒模型"-〉浏览器认为每一个元素标签都可以当作一个盒子，只要是一个盒子，那么就应该具备以下几个样式:
+
+               width:内容的宽度
+               heihgt:内容的高度
+               padding:内填充
+                 padding- left:10px;
+                 padding- right:10px;
+                 padding- top:10px;
+                 padding- bottom10px
+                 padding:10px;=>四边内填充都是10
+                 padding:10px 5px;->上下10 左右５
+                 padding:10px 5px 20px:->上10 左右５　下２０
+                 padding:10px 11px 12px 13px:->上10　右11　下12　左1
+border:边框
+    border:lpx solid red;->大小　实线（dashed虚线）边框颜色=>这样相当于四个边框都是这个样式
+    border-left:lpx solid red;->单独设置左边框
+    (-right/-top/-bottom)
+        border-left-width:lpx
+        border-left-style:solid
+        border-left-color:red
+margin:外边（和padding一样可以分别给四个方向设置，）也可以合并在一起）
+margin:0 outo;让盒子在容器中“水平居中”
+操作文字的样式：
+    font-famly:设置文字的类型（楷体／宋体／微软雅黑。。。）
+    font-style:设置斜体（italic）还是正常（normal）
+    font-weight:设置是加粗（bold）还是不加粗（normal）
+    font-size设置文字的大小（谷歌下最小字体１px 默认字体１６px)
+color:设置文字的颜色（英文单词／１６进制颜色＃ＦＦＦＦＦＦ／ＲＧＢ颜色（rgb255.255.255）
+text-decoration:underline;设置文字是否有下划线（ubderline:有none没有）
+text-align:center;设置文字对齐方式（ＬＥＦＴ靠左对齐，也是默认值　center居中对齐right）
+text-indent:10px;设置首行缩进
+line-height:30px;设置行高
+
+操作背景的：
+　　　background:red设置背景颜色
+操作位置的
+　　　float:left向左浮动
+
+
+
+
+4、块状和行内标签的区别
+    块状
+    －〉块状标签默认的宽度是独占一行的，在默认的情况下，两个块状标签不能再同一行展示
+    －〉我们是可以给块状标签设置width/heigth这些样式的
+    行内
+    －〉行内标签的宽度和高度取决于文字和内容（文字多久宽文字大就高），没有独占一行，所以两个行内标签可一在统一行展示
+    ->默认情况下，我们给行内标签设置width/height是没啥用的，它的宽高依然取决于内容和文字。
+
+
+
+    块状标签和行内标签的相互转换
+
+    display:block->让元素显示 (它还可以把行内标签转换为块状标签）
+     display:none->让元素隐藏
+     display;inline->吧块状标签转换为行内标签
+     dispplay:inline-block->把当前标签变为行内块状标签（即拥有行内的特点，也拥有块状的特点）
+     弊端：会把两个标签之间的换行和空格当作一个位置来占用，导致两个标签之间有间隙
+
+
+     -〉如果想让元素即能设置宽和高也能在统一航展示，而且可以消除空格和转换导致的间隙，我们使用float浮动来处理
+     a{
+     display:block;
+     float;left;//->让所有的A标签在同一行靠左浮动对齐（如果加了float,display:block可以不用写，因为加了浮动也可以把行内标签变为块状标签）
+     width:50px;
+     height:30px;
+     }

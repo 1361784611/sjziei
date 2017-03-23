@@ -1,0 +1,71 @@
+html,body{
+    width:100%;
+    background: #F4F4F4;
+}
+.sjziei-article{
+    margin:0 auto;
+    padding:0 20px;
+    width:760px;
+    background:#FFF ;
+}
+.sjziei-header{
+    border-bottom:1px dashed #DDD;
+}
+.sjziei-header h1{
+    line-height: 50px; /*设置行高：一行文字所占的高度*/
+    font-size: 30px;
+    /*margin: 0 auto;!*设置盒子(容器水平居中的)，对文字没有用*!*/
+    text-align: center;
+}
+.sjziei-header h2 {
+    line-height: 50px;
+    text-align: center;
+    font-size: 27px;
+    color: deeppink ;
+    font-weight:bold;
+}
+.sjziei-main{}
+.sjziei-main p{
+    line-height:25px;
+    font-size:14px;
+    text-indent:25px;
+color:green}
+.sjziei-main  h2{
+    font-size:26px;
+    color:blue;
+}
+.sjziei-main  h3{
+    font-size:20px;
+    color:orangered;}
+
+.sjziei-main figure{
+    width:300px;
+    margin:15px 15px 0 0;
+    float:left;
+}
+.sjziei-main figure img{
+    width:100%;
+}
+@media all and (max-width:800px){
+    .sjziei-article {
+        padding:0  10px;
+        width:auto;
+    }
+    .sjziei-header  h1,.sjziei-header h2{
+        text-overflow:ellipsis;
+
+        white-space:nowrap;
+        overflow:hidden;
+    }
+}
+@media all and (max-width:480px) {
+
+    .sjziei-main figure {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+    }
+    .sjziei-main aside{
+        display:none;
+    }
+}

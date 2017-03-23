@@ -1,0 +1,53 @@
+html, body {
+    width: 100%;
+    background: #F4F4F4;
+    font-size: 14px;
+}
+.sjzxg-article {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+.sjzxg-header h1{
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+.sjzxg-main figure{
+    margin: 0 15px 15px 0;
+    width: 350px;
+    float: left;
+}
+.sjzxg-main p{
+line-height: 30px;
+font-size: 16px;
+text-indent: 20px;
+}
+.sjzxg-main p strong{
+color: black;
+}
+.sjzxg-footer address{
+color: red;
+}
+@media all and (max-width:800px){
+    .sjzxg-article{
+        padding: 0 10px;
+        width:auto;
+    }
+}
+.sjzxg-header h1{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@media all and (max-width:480px) {
+    .sjzxg-main figure {
+        margin:10px 0;
+        width: auto;
+        float: none;
+    }
+}
+body{
+
+}

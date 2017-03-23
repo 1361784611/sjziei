@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    background: #FFF;
+}
+.zhineng-article{
+    margin: 0 auto ;
+    padding: 0 20px ;
+    width: 760px;
+
+
+}
+.zhineng-header{
+    border-bottom: 1px dashed #DDD;
+}
+.zhineng-header h1{
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center ;
+}
+.zhineng-main p{
+    line-height: 60px;
+    font-size: 16px;
+    text-indent:20px;
+
+
+
+
+}
+
+.zhineng-main p em{
+    font-weight: bold;
+    color: brown;
+    font-style: normal;
+}
+.zhineng-main figure{
+    margin:15px 15px 0 0;
+    width:300px;
+    float: left;
+}
+.zhineng-main figure img{
+    width: 100%;
+    height:auto;
+}
+@media all and (max-width:800px) {
+    .zhineng-article {
+        padding: 0 10px;
+        width: auto;
+    }
+
+    .zhineng-header h1 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+@media all and (max-width:480px) {
+    .zhineng-main figure {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+
+    }
+}
+
+body{
+
+}

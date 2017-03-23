@@ -1,0 +1,76 @@
+html,body{
+    width: 100%;
+    background: beige;
+}
+.lvluo-article{
+    margin:0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background:#fff;
+}
+.lvluo-header{
+    border-bottom: 1px dashed #ddd;
+
+}
+.lvluo-header h1{
+    line-height:50px;
+    font-size: 35px;
+    text-align:center;
+}
+.lvluo-header h2{
+    line-height:50px;
+    text-align:center;
+    font-size: 25px;
+    color:orange;
+}
+
+.lvluo-main{
+}
+.lvluo-main h3{
+    line-height:50px;
+    font-size: 20px;
+    color:green ;
+
+}
+.lvluo-main figure{
+    margin:auto ;
+    width:300px;
+}
+.lvluo-main figure img{
+    width: 100%;
+}
+.lvluo-main p{
+    line-height:35px;
+    font-size: 20px;
+    text-indent:40px;
+}
+.lvluo-main aside{
+    margin:auto ;
+    width:300px;
+}
+.lvluo-main aside img{
+    width: 100%;
+}
+@media all and (max-width:800px){
+    .lvluo-article{
+        padding: 0 10px;
+        width: auto;
+    }
+    .lvluo-header h1,.lvluo-header h2{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+}
+@media all and (max-width: 480px){
+    .lvluo-main figure{
+        margin: 10px 0;
+        width: auto;
+        float: none;
+    }
+    .lvluo-main aside{
+        display: none;
+    }
+
+}

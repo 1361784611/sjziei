@@ -1,0 +1,72 @@
+html,body{
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.sjziei-article {
+    margin: 0 auto; /*设置盒子距离左右两边的距离是自动计算的=>让当前的盒子处于页面的水平中间位置 =>这种方式是实现元素水平居中的最常用的方式*/
+    padding: 0 20px; /*内填充：当前的一个盒子内边框和内容中间的空白填充部分，如果想让一个容器的四边有一些空白的话，可以选择内填充*/
+    width: 760px;
+    background: #FFF;
+}
+.sjziei-article h1{
+    font-size: 26px;
+    text-align: center;
+}
+.sjziei-article p{
+    font-size: 14px;
+    text-indent: 2em;
+}
+.sjziei-article figure{
+    margin: 15px 15px 0 0;
+    width: 300px;
+    float: left;
+}
+.sjziei-article figure img{
+    width: 100%;
+    height: 400px;
+}
+.sjziei-article figure figcaption{
+    font-size: 14px;
+    color: #AAA;
+    font-style: italic;
+    line-height: 20px;
+}
+.sjziei-article ul li em{
+    font-style: normal;
+    font-size: 16px;
+    color: blue;
+}
+@media all and (max-width:800px){
+    .sjziei-article{
+        padding: 0 5px;
+        width: auto;
+    }
+    .sjziei-article h1,.sjziei-article ul li em{
+        text-overflow: ellipsis;/*超出的部分自动裁切，并以省略号代替；clip:只裁切没有省略号*/
+        white-space: nowrap;/*强制不换行*/
+        overflow: hidden;/*超出的部分隐藏*/
+    }
+    .sjziei-article p{
+        color: darkgreen;
+    }
+}
+@media all and (max-width: 480px) {
+    /*宽度小于480px的时候，我们也没有必要让文字环绕图片了，图片单独的占一行即可*/
+    .sjziei-article figure {
+        margin: 10px  0;
+        width: auto;
+        float: none;
+    }
+    .sjziei-article aside{
+        display: none;
+    }
+    .sjziei-article p{
+        color: red;
+    }
+}
+
+
+
+
+

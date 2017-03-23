@@ -1,0 +1,53 @@
+html,body{
+    width:100%;
+    background:#F4F4F4;
+}
+.sjziei-Nav{
+    height: 35px;
+    background: #FFF;
+}
+.sjzieiNav ul{
+    /*样式可以暂时不用写，宽度和高度让里面的li给撑开即可*/
+}
+.sjziei-Nav ul li{
+    float: right;
+
+}
+.sjziei-Nav ul li a{
+    display: block;
+    padding: 0 10px ;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+}
+.sjziei-Nav ul li a:hover{
+    color: #FFF;
+    background: -webkit-linear-gradient(top left,red,orange,yellow,green);
+    background: -moz-linear-gradient(top left,red,orange,yellow,green);
+    background:  -ms-linear-gradient(top left,red,orange,yellow,green);
+    background: -o-linear-gradient(top left,red,orange,yellow,green);
+    background: linear-gradient(top left,red,orange,yellow,green);
+    box-shadow: 5px 5px 10px 0 #000;
+
+}
+.sjziei-Nav ul li div{
+    display: none;
+}
+.yanse{
+    background: cornflowerblue;
+    color: blue;
+
+}
+.yanse:hover div{
+    display: block;
+}

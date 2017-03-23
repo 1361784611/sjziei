@@ -1,0 +1,96 @@
+
+html, body {
+     width: 100%;
+     background: #F4F4F4;
+ }
+
+.sjziei-article {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+
+.sjziei-header {
+    border-bottom: 1px dashed #DDD;
+}
+
+.sjziei-header h1 {
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sjziei-header h2 {
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+｝
+
+.sjziei-main {
+
+}
+
+.sjziei-main h3 {
+    line-height: 50px;
+    font-size: 16px;
+    color: green;
+}
+
+.sjziei-main p {
+    line-height: 35px;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+.sjziei-main p em {
+    font-weight: bold;
+    color: orange;
+    font-style: normal;
+}
+
+.sjziei-main figure {
+    margin: 15px 15px 0 0;
+    width: 300px;
+    float: left;
+}
+
+.sjziei-main figure img {
+    width: 100%;
+}
+
+.sjziei-main figure figcaption {
+    font-size: 12px;
+    color: #AAA;
+    font-style: italic;
+    line-height: 20px;
+}
+@media all and (max-width:  800px) {
+    .sjziei-article {
+        padding: 0 10px;
+        width: auto;
+    }
+
+
+    .sjziei-header h1, .sjziei-header h2 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sjziei-main figure{
+        margin: 10px 0;
+        width: auto;
+        float:none;
+
+    }
+    .sjziei-main aside{
+        display: none;
+    }
+}
+
+body{
+
+}

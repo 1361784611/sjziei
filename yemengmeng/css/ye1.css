@@ -1,0 +1,62 @@
+html ,body{
+white:100%;
+background: #F4F4F4;
+
+}
+.ye-article{
+    margin: 0 auto;
+    padding: 0 20px;
+    width:760px;
+    background:#FFF;
+    color:green;
+}
+.ye-header{
+    border-bottom: 1px dashed #DDD;
+    color:lightseagreen;
+    font-size:30px;
+}
+.ye-main{
+}
+.ye-main p{
+    line-height:35px;
+    text-indent:30px;
+    font-size:25px;
+}
+.ye-main figure{
+    margin:30px 30px;
+width:300px;
+    float: left;
+}
+.ye-main figure img{
+
+    width:100%;
+}
+.ye-figure{
+    float: left;
+}
+@media all and (max-width: 800px) {
+    .ye-article {
+        padding: 0 10px;
+        width: auto;
+
+    }
+    .ye-header h1{
+
+        text-overflow:ellipsis;
+
+        white-space:nowrap;
+        overflow:hidden;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    .ye-main figure {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+    }
+    .ye-main aside{
+        display:none;
+    }
+}

@@ -1,0 +1,32 @@
+html, body {
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.baidu-nav {
+    height: 35px;
+    background: #FFF;
+}
+.baidu-nav ul {
+
+}
+
+.baidu-nav ul li {
+    float: left ;
+
+}
+
+.baidu-nav ul li a {
+    display: block;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold ;
+}
+.baidu-nav ul li a:hover {
+    color:blue ;
+}

@@ -1,0 +1,60 @@
+html, body {
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.sjziei-nav {
+    height: 35px;
+    background: white;
+
+}
+
+.sjziei-nav ul {
+    /*样式可以暂时不用写，宽度和高度让里面的LI撑开即可*/
+
+}
+
+.sjziei-nav ul li {
+    float: left;
+    /*LI的宽度和高度不用写，因为我们可以让里面的A标签把它撑开*/
+}
+
+.sjziei-nav ul li a {
+    display: block; /*设置成块状标签才可以设置宽高*/
+    padding:0 20px;/*保持间距相同，不管字多少*/
+    height: 35px;
+    line-height: 35px; /*文本垂直居中*/
+    text-align: center; /*文本水平居中*/
+
+    color: #555;
+    font-size: 16px;
+    font-weight: bold; /*bold是加粗，写出具体的数字也是加粗，数字越大越粗*/
+    border-radius: 20px;/*设置盒子圆角个 */
+    -webkit-transition: 0.3s;/*谷歌*/
+    -moz-transition: 0.3s;/*火狐*/
+    -ms-transition: 0.3s;/*IE*/
+    -o-transition: 0.3s;/*欧朋*/
+    transition: 0.3s;/*其它*/
+    /*设置过渡动画，以后只要A的样式发生改变，都会在0.3秒内完成动画，设定的时间是动画总时间，时间越大动画越慢 。2.transition是css3新加的属性，在IE低版本浏览器中不兼容，如果不影响用户的正常使用，我们可以选择不处理兼容=>优雅降级。/为了更好的兼容其他高版本浏览器，我们一般都写两套或者五套（手机端两套只留第一个和最后一个，pc端五套全写）*/
+}
+.sjziei-nav ul li a:hover{
+    color: #FFF;
+    /*background: #F40;*/
+    background: -webkit-linear-gradient(top left,red,orange,black,green);/*linear 线 gradient 渐变*/
+    background: -moz-linear-gradient(top left,red,orange,black,green);
+    background: -ms-linear-gradient(top left,red,orange,black,green);
+    background: -o-linear-gradient(top left,red,orange,black,green);
+    background: linear-gradient(top left,red,orange,black,green);
+
+    box-shadow: 5px 5px 10px #000; /*设置盒子阴影:第一个是x轴偏移值     第二个是y轴偏移值     第三个是阴影模糊度阴影扩展半径     第四个阴影颜色*/
+}
+
+
+
+
+
+
+
+
+
+

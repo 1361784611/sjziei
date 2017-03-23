@@ -1,0 +1,60 @@
+html,body{
+    width:100%;
+    background: #F4F4F4;
+}
+
+.love-nav{
+    height: 35px;
+    background: #FFFFFF ;
+}
+
+.love-nav ul {
+    /*样式可以暂时不用写，宽度和高度让里面的LI给撑开即可*/
+}
+
+.love-nav ul li {
+    float: right;
+    /*LI的宽度和高度可以不用写：因为我们可以让里面的A标签把它撑开*/
+}
+
+.love-nav ul li a {
+    text-decoration: underline;
+    display: block; /*设置为块状标签才可以设置宽高*/
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px; /*文本垂直居中*/
+    text-align: center; /*文本水品居中*/
+
+    color: #555;
+    font-size: 16px;
+    font-weight: 600; /*bold是加粗,写出具体的数字也是加粗,数字越大越粗*/
+
+    /*border-radius: 20px; !*设置盒子圆角*!*/
+   /* -webkit-transition: 0.3s; !*谷歌*!
+    -moz-transition: 0.3s; !*火狐*!
+    -ms-transition: 0.3s; !*IE*!
+    -o-transition: 0.3s; !*欧朋*!
+    transition: 0.3s; !*其它*!*/
+    /*
+     *设置过渡动画，以后只要A的样式发生改变，都会在0.3秒之内完成动画，设定的时间是动画总时间，时间越大动画越慢
+     *transition是CSS3中新增加的属性，在IE低版本浏览器中不兼容，如果不影响用户的正常使用，我们可以选择不处理兼容(=>"优雅降级")
+     *为了更好的兼容其它高版本浏览器，我们一般都写两套或者五套(手机上写两套(只留第一个和最后一个),PC端写五套)
+    */
+}
+
+.love-nav ul div:nth-child(1) a{
+    display: none;
+}
+
+.love-nav ul li a:hover {
+    color: #000;
+    /*background: #F40;*/
+   /* background: -webkit-linear-gradient(top left, red, orange, yellow, green);
+    background: -moz-linear-gradient(top left, red, orange, yellow, green);
+    background: -ms-linear-gradient(top left, red, orange, yellow, green);
+    background: -o-linear-gradient(top left, red, orange, yellow, green);
+    background: linear-gradient(top left, red, orange, yellow, green);
+
+    !*设置盒子阴影：X轴偏移值 Y轴偏移值 阴影模糊度 阴影扩展半径 阴影的颜色*!
+    box-shadow: 5px 5px 10px 0 #333;*/
+}

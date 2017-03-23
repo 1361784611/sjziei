@@ -1,0 +1,50 @@
+html, body {
+    width: 100%;
+    background: #F4F4F4;
+}
+.dazhong-article {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+
+.dazhong-header {
+    border-bottom: 1px dashed #DDD;
+}
+.dazhong-header h1 {
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+.dazhong-main h3 {
+    line-height: 50px;
+    font-size: 18px;
+    text-align: left ;
+    color: red ;
+}
+.dazhong-main p {
+    line-height: 35px;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+@media all and (max-width: 800px) {
+    .dazhong-article {
+        padding: 0 10px;
+        width: auto; /*宽度自适应：页面于多宽，我们让article的宽度跟着自动改变即可*/
+    }
+}
+.dazhong-header h1 {
+   text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@media all and (max-width: 480px) {
+
+    .dazhong-main figure {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+    }
+}

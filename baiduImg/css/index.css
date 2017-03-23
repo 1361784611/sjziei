@@ -1,0 +1,213 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background: url("../img/timg.jpg") no-repeat;
+    background-size: cover;
+}
+
+/*--导航--*/
+#nav {
+    height: 36px;
+}
+
+#nav ul {
+    float: right;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav li a {
+    display: block;
+    padding: 0 10px;
+    height: 36px;
+    line-height: 36px;
+
+    color: #FFF;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#nav li a.no {
+    text-decoration: none;
+}
+
+#nav li a.line {
+    color: #999;
+}
+
+#nav li a:hover {
+
+}
+
+/*--LOGO--*/
+h1 {
+    margin: 50px auto 0; /*四个值：上\右\下\左  三个值：上\左右\下  两个值：上下\左右  一个值：四个方向具有共同的值*/
+    width: 244px;
+    height: 105px;
+
+    /*让容器中的文字看不见的方式*/
+    /*overflow: hidden; /!*溢出隐藏：让容器中的图片和容器宽高一致，那么剩余的文字部分就会超出容器，我们把超出的文字溢出隐藏即可*!/*/
+    /*color: transparent;/!*文字的颜色是透明色：当选中页面中文字的时候，还会出现*!/*/
+    font-size: 0; /*设置字体大小为零，这样文字就看不见了：最常使用的方式*/
+
+    /*overflow: hidden; /!*问题：必须溢出才能隐藏，如果我们能想办法让他溢出即可*!/
+    text-indent: -10000px; /!*文字缩进：缩进负一万，也就是让文字向左偏移一万，超出盒子的范围，但是这种方式只能应用于图片是背景图，如果是一个img标签的话，这个标签也会跟着一起缩进，导致图片也看不见了*!/*/
+}
+
+h1 img {
+    /*img标签是特殊的，他默认是行内块状标签，但是它和用display:inline-block设置的还是有略微的区别*/
+    width: 100%;
+    height: 100%;
+}
+
+/*--搜索--*/
+#search {
+    margin: 10px auto 0;
+    width: 644px;
+}
+
+#search input {
+    float: left;
+    /*display: block;/!*如果设置了浮动，那么元素会变为块状标签，我们不需要再写block了*!/*/
+    padding: 0 10px;
+    width: 488px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #DDD;
+
+    opacity: 0.8; /*设置透明度：0~1 0是完全透明 1是不透明 。但是在IE低版本浏览器中不兼容，我们需要使用filter滤镜处理*/
+    filter: alpha(opacity=80); /*这里的数字是上面小数的100倍*/
+}
+
+#search div {
+    float: left;
+    width: 104px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+    background: #38F;
+    cursor: pointer; /*鼠标滑过是小手的图标，代笔当前的元素是可以点击的*/
+}
+
+#search div:hover {
+    background: orange;
+}
+
+/*--图片展示--*/
+#imgBox {
+    margin: 50px auto 0;
+    padding: 0 10px 10px 0;
+    width: 850px;
+    background: rgba(255, 255, 255, 0.2); /*RGBA：背景颜色透明*/
+}
+
+#imgBox ul {
+    /*暂时无样式，它的样式都是被子元素撑开的*/
+}
+
+#imgBox li {
+    float: left;
+    margin: 10px 0 0 10px;
+    /*其它样式让A给它撑开*/
+}
+
+#imgBox li a {
+    display: block;
+    width: 160px;
+    height: 140px;
+    position: relative;
+    overflow: hidden; /*当鼠标滑过图片放大的时候，我们把超出的内容隐藏掉*/
+}
+
+#imgBox li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /*给IMG设置CSS3动画，当它放大的时候有一个过度的动画效果*/
+    -webkit-transition: 0.5s; /*设定当前元素动画的总时间是0.5秒，也就是图片放大完成需要0.5秒*/
+    transition: 0.5s;
+}
+
+#imgBox li a span {
+    /*
+     * 定位处理：
+     * 把当前的元素定位到容器中的某一个具体的位置，和元素在容器中是第几个没关系，使用定位的话，想定在容器的哪个位置都可以
+     * 我们今天需要让span相当于A定位
+     *    1)需要给A标签增加一个样式属性：position: relative;(相对定位)
+     *    2)给span设置：position: absolute;，然后调节span的位置即可(top/left/bottom/right/z-index...)
+    */
+    position: absolute; /*设置position: absolute后,标签自动转换为块状标签*/
+    left: 0;
+    bottom: 0;
+    z-index: 10; /*元素默认层级是0，我们设定的10会把他们都压住*/
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-indent: 10px; /*首行缩进10px*/
+
+    color: #F4F4F4;
+    font-size: 13px;
+    font-weight: bold;
+
+    /*
+     背景颜色渐变
+        linear-gradient：背景颜色的线性渐变，从一个颜色向另外一个颜色过渡变化
+            top：第一个值指定的是方向 top是从上到下渐变、top left从左上角到右下角渐变
+            后面放入的都是颜色，颜色个数大于等于两个即可
+
+            rgba：设置一个RGB的颜色，最后一个值是设定透明度
+    */
+    background: -webkit-linear-gradient(top, rgba(121, 104, 72, 0), rgba(121, 104, 72, 1));
+    background: linear-gradient(top, rgba(121, 104, 72, 0), rgba(121, 104, 72, 1));
+    /*background: -webkit-linear-gradient(top left, red, orange, green);*/
+}
+
+#imgBox li a:hover img {
+    /*鼠标滑过A的时候，让A下面的IMG具有以下的样式*/
+
+    /*
+       CSS3中的变形效果transform
+          transform: scale(1.2) 缩放N倍
+          transform: rotate(360deg) 旋转多少度
+          ...
+
+       使用CSS3中的属性，我们需要加两套或者五套
+          -webkit-transform   谷歌等webkit内核的浏览器
+          -moz-transform   火狐浏览器
+          -ms-transform   IE浏览器
+          -o-transform   欧朋浏览器
+          transform
+    */
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+/*
+ * 面试的时候问：如何把行内标签变为块状标签
+ * 我们经常使用display:block来设置，有时候我们也可以用display：inline-block来设置，这样既有行内特点也有块状特点；真实的项目中，如果我们给当前的元素设置了float或者position，那么这个元素也会变为块状标签
+*/
+
+/*控制音频或者视频在页面左上角的位置*/
+audio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+video {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 10;
+    width: 300px;
+    height: 300px;
+}

@@ -1,0 +1,60 @@
+html,body{
+    width: 100%;
+    background:#F4F4F4;
+}
+.sjziei-article{
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+}
+.sjziei-header{
+    border-bottom:1px dashed #DDD;
+}
+.sjziei-header h1{
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.sjziei-main p{
+    line-height: 35px;
+    font-size: 14px;
+    text-indent: 20px;
+    color: darkgrey;
+}
+.sjziei-main figure{
+    margin: 15px;
+    width: 300px;
+    float: left ;
+}
+.sjziei-main figure img{
+    width:100%;
+    height: auto;
+}
+@media all and (max-width:  800px) {
+    .sjziei-article {
+        padding: 0 10px;
+        width: auto;
+    }
+
+
+    .sjziei-header h1{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sjziei-main figure {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+
+    }
+
+    body {
+
+    }
+}

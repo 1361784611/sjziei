@@ -1,0 +1,96 @@
+html,body {
+    width: 100%;
+    background: #F4F4F4;
+}
+.tyk-article{
+    padding: 0 20px;
+    width: 760px;
+    background: #FFF;
+    margin: 0 auto;
+}
+.tyk-header {
+    width: 100%;
+    border-bottom: 1px dashed #DDD;
+}
+.tyk-header h1{
+    line-height: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+.tyk-header h2{
+    line-height: 30px;
+    font-size: 30px;
+    text-align:center;
+    color: indigo;
+}
+.tyk-main figure{
+    width: 300px;
+    /*外边距*/
+    margin: 30px 30px 0px 0px;
+    float: right;
+}
+.tyk-main figure img{
+    /*调整图片宽度，img不是块状标签，所以不能省略*/
+    width: 100%;
+    /*设置高度，不用设置，浏览器会根据图片的宽度等比缩放，保证图片不会变形*/
+    height: auto;
+
+}
+.tyk-main ol {
+    /*行高*/
+    line-height: 35px;
+    /*字体大小*/
+    font-size: 20px;
+    /*颜色*/
+    color: orangered;
+}
+.tyk-main h3{
+    /*设置行高*/
+    line-height: 50px;
+    /*字体大小*/
+    font-size: 20px;
+}
+.tyk-main h4{
+    /*设置行高*/
+    line-height: 25px;
+    /*字体大小*/
+    font-size: 15px;
+    /*颜色*/
+    color: yellowgreen;
+}
+.tyk-main p{
+    /*设置行高*/
+    line-height: 20px;
+    /*字体大小*/
+    font-size: 12px;
+    /*首行缩进*/
+    text-indent: 20px;
+
+}
+
+
+
+@media all and (max-width:480px){
+    .tyk-main figure{
+        margin:10px 0;
+        width:auto;
+        float:none;
+    }
+
+.tyk-header h1, .tyk-header h2{
+    /*内容超过一行自动裁切，并以...代替*/
+    text-overflow:ellipsis;/*超出的部分自动裁切，添加省略号； clip:只是裁切没有省略号*/
+    white-space: nowrap;/*强制不换行*/
+    overflow: hidden;/*超出的部分隐藏*/
+
+}}
+@media all and (max-width:800px) {
+    .tyk-article{
+        padding : 0 10px;
+        width:auto;
+        /*宽度自适应：页面有多宽，我们让article的宽度跟着自动改变*/
+    }
+}
+
+
+

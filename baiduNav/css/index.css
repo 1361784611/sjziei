@@ -1,0 +1,179 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*整个页面的宽度以及高度与浏览器保持一致,超出的内容隐藏(溢出隐藏：overflow: hidden)*/
+}
+
+/*--导航主体部分样式--*/
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav .item {
+    float: right;
+    margin-right: 20px;
+}
+
+.nav .item > li {
+    /*因为在结构中,后代级别中也存在LI,.item li会把后代中的所有的LI都设置相同的样式,这样不好,所以我们只设置子级中的LI,同理设置A标签的时候也只设置子级的A*/
+    float: left;
+    margin-left: 20px;
+}
+
+.nav .item > li > a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.nav .item > li > a.noBold {
+    /*
+     *具有noBold样式的A,文字不加粗,有没有空格是不一样的意思
+     * A.noBold:具备noBold样式的A标签(并列条件选择器)
+     * A .noBold:A标签后代中拥有noBold样式的元素(后代选择器)
+     */
+    font-weight: normal;
+}
+
+.nav .item > li > a.more {
+    /*具有MORE样式的A标签:更多产品*/
+    padding: 0 5px;
+    color: #FFF;
+    background: #38F;
+    text-decoration: none;
+}
+
+.nav .item > li > a:hover {
+    color: #00C;
+}
+
+.nav .item > li > a.more:hover {
+    /*具有MORE样式的A标签,鼠标滑过的时候单独设置样式*/
+    color: #FFF;
+    text-decoration: underline;
+}
+
+/*--设置区域详细--*/
+.nav .item li > a.settings {
+    /*具备SETTINGS样式的A标签：设置栏*/
+    position: relative; /*设置position: relative一会让里面的子元素相对于它来定位*/
+}
+
+.nav .item li > a.settings:hover .setBox {
+    display: block;
+    /*默认SETBOX是隐藏的,鼠标滑过设置,让下拉菜单展开*/
+}
+
+.setBox {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    margin-left: -36px;
+    width: 72px;
+}
+
+.setBox i {
+    /*以下代码都是在制作一个三角形和制作三角箭头*/
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #D1D1D1;
+}
+
+.setBox i:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #FFF;
+}
+
+.setBox ul {
+    margin-top: 10px;
+    border: 1px solid #D1D1D1;
+    box-shadow: 2px 2px 5px 0 #D1D1D1;
+}
+
+.setBox ul li {
+    line-height: 26px;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.setBox ul li:hover {
+    color: #FFF;
+    background: #38F;
+}
+
+/*--设置更多产品区域样式--*/
+.moreBox {
+    display: none;
+    position: absolute; /*父级元素都没有设置position: relative,那么默认的定位参照物是BODY,我们期望的父级参照物就是BODY*/
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    width: 66px;
+    height: 100%; /*相对于BODY而言,高度何其保持一致*/
+    background: #F9F9F9;
+    border-left: 1px solid #E7E7E7;
+}
+
+.moreBox h2 {
+    margin-top: 10px;
+    line-height: 43px;
+    text-align: center;
+    border-bottom: 1px solid #F0F0F0;
+
+    color: #555;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.moreBox li {
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.moreBox li {
+    display: block;
+}
+
+.moreBox li img {
+    display: block;
+    margin: 5px 8px;
+    width: 50px;
+}
+
+.moreBox li span {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+}
+
+.moreBox li:hover span {
+    text-decoration: underline;
+}
+
+.nav .item > li > a.more:hover .moreBox {
+    display: block;
+}
