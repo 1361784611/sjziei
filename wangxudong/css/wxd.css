@@ -29,22 +29,29 @@ html, body {
     text-indent: 20px;
 }
 
+.dazhong-main figure{
+	margin: 10px auto;
+    width: 680px;
+}
+
+.dazhong-main figure img{
+	width:100%;
+}
+
 @media all and (max-width: 800px) {
     .dazhong-article {
         padding: 0 10px;
         width: auto; /*宽度自适应：页面于多宽，我们让article的宽度跟着自动改变即可*/
     }
+    .dazhong-header h1 {
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       overflow: hidden;
+    }
 }
-.dazhong-header h1 {
-   text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-@media all and (max-width: 480px) {
 
+@media all and (max-width: 680px) {
     .dazhong-main figure {
-        margin: 10px 0;
         width: auto;
-        float: none;
     }
 }
